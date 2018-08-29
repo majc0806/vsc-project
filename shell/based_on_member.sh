@@ -18,7 +18,9 @@ get_data(){
 #脚本开始之前清理工作空间
 clean_space(){
   rm -rf output
+  rm -rf input
   mkdir output
+  mkdir input
 }
 
 #改变状态数组，参数1为status，参数2为成员数组当前索引
