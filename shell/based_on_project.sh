@@ -11,6 +11,17 @@ error(){
 
 }
 
+#脚本开始之前清理工作空间
+clean_space(){
+  if [ ! -d "input/" ];then
+    mkdir input
+  fi
+  if [ ! -d "output/" ];then
+    mkdir output
+  fi
+  rm -f output/based_on_project.txt
+}
+
 #改变状态数组，参数1为status，参数2为成员数组当前索引
 #标识位为true时，表示Merged；false表示Abandoned
 change_status(){
@@ -36,8 +47,24 @@ change_status(){
   fi
 }
 
+#获取输入日期的时间戳，用于限定查询日期
+get_timestamp(){
+  timestamp=0
+  if [ -n "${1}" ]
+  then
+    timestamp=$(date -d "${1}" +%s)
+    result=${?}
+    test ${result} -eq 1 && error   
+  else
+    timestamp=0
+    result=1
+  fi
+  echo ${timestamp}
+}
+
 #从info.json文件中读入数据
 read_file(){
+  timestamp=$(get_timestamp ${1})
   while read line #从info.json逐行读入数据(每行都是一个project)
   do
     counter=0       #计数器
@@ -49,7 +76,7 @@ read_file(){
     create_time=$(echo ${line} | grep -Po '"createdOn":[0-9]*' | grep -Po '[0-9]*')
 
     #如果时间不在2018-08-01之后，则跳过
-    if [[ -z ${create_time} || ${create_time} -lt 1533052800 ]]
+    if [[ -z ${create_time} || ${create_time} -lt ${timestamp} ]]
     then
     continue
     fi
@@ -82,14 +109,14 @@ read_file(){
 write_out(){
   if $(check_info)
   then
-    echo "以下是基于每个项目的change-----" >> output/august
+    echo "以下是基于每个项目的change-----" >> output/based_on_project.txt
     for ((i=0;i<${#project_list[@]};i++)) 
     do
-        echo ${project_list[${i}]}"   Abandoned:${abandoned[${i}]}   Merged:${merged[${i}]}" >> output/august
+        echo ${project_list[${i}]}"   Abandoned:${abandoned[${i}]}   Merged:${merged[${i}]}" >> output/based_on_project.txt
     done
 
-    echo "sum change:"${row_count} >> output/august
-    echo "sum project:"${#project_list[@]} >> output/august
+    echo "sum change:"${row_count} >> output/based_on_project.txt
+    echo "sum project:"${#project_list[@]} >> output/based_on_project.txt
   else
     error
   fi
@@ -130,8 +157,10 @@ check_info(){
 }
 
 main(){
-  read_file
+  clean_space
+  get_data
+  read_file ${1}
   write_out
 }
 
-main
+main ${1}

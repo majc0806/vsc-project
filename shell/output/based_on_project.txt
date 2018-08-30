@@ -1,0 +1,13 @@
+以下是基于每个项目的change-----
+sphinx/mario/yocto/ConnectedHMI   Abandoned:6   Merged:8
+sphinx/mario/yocto/ConnectedHMI/HMIView   Abandoned:1   Merged:7
+sphinx/mario/yocto/AudioSourceManager   Abandoned:1   Merged:0
+sphinx/mario/yocto/meta-thundersoft   Abandoned:1   Merged:5
+sphinx/rcar/static_manifests_SY   Abandoned:0   Merged:3
+sphinx/a5/meta-st-carproc   Abandoned:0   Merged:1
+sphinx/mario/yocto/BTService   Abandoned:0   Merged:2
+sphinx/a5/linux   Abandoned:0   Merged:2
+sphinx/mario/yocto/BspCommunicationService   Abandoned:0   Merged:2
+sphinx/a5/m3-loader   Abandoned:0   Merged:1
+sum change:40
+sum project:10
