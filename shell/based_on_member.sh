@@ -146,7 +146,7 @@ main(){
   get_data
   read_file
   write_out
-  source based_on_project.sh
+  bash based_on_project.sh
 }
 
 main
