@@ -1,13 +1,17 @@
-以下是基于每个项目的change-----
-sphinx/mario/yocto/ConnectedHMI   Abandoned:6   Merged:8
-sphinx/mario/yocto/ConnectedHMI/HMIView   Abandoned:1   Merged:7
-sphinx/mario/yocto/AudioSourceManager   Abandoned:1   Merged:0
-sphinx/mario/yocto/meta-thundersoft   Abandoned:1   Merged:5
-sphinx/rcar/static_manifests_SY   Abandoned:0   Merged:3
+以下是2018-08-10之后基于每个项目的change-----
+sphinx/mario/yocto/ConnectedHMI   Abandoned:16   Merged:24
+sphinx/mario/yocto/lib_media   Abandoned:1   Merged:0
+sphinx/mario/yocto/ConnectedHMI/HMIView   Abandoned:6   Merged:20
+sphinx/mario/yocto/AudioSourceManager   Abandoned:2   Merged:1
+sphinx/mario/yocto/meta-thundersoft   Abandoned:3   Merged:15
+sphinx/mario/yocto/BTService   Abandoned:1   Merged:3
+sphinx/rcar/static_manifests_SY   Abandoned:0   Merged:5
 sphinx/a5/meta-st-carproc   Abandoned:0   Merged:1
-sphinx/mario/yocto/BTService   Abandoned:0   Merged:2
-sphinx/a5/linux   Abandoned:0   Merged:2
-sphinx/mario/yocto/BspCommunicationService   Abandoned:0   Merged:2
-sphinx/a5/m3-loader   Abandoned:0   Merged:1
-sum change:40
-sum project:10
+sphinx/a5/linux   Abandoned:1   Merged:2
+sphinx/mario/yocto/BspCommunicationService   Abandoned:3   Merged:5
+sphinx/a5/m3-loader   Abandoned:0   Merged:2
+sphinx/mario/yocto/WelinkService   Abandoned:0   Merged:1
+sphinx/mario/yocto/InfoReportService   Abandoned:0   Merged:3
+sphinx/poky   Abandoned:0   Merged:1
+sum change:116
+sum project:14

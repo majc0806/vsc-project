@@ -2,6 +2,7 @@ project_list=() #项目列表
 merged=()       #被Merge的change
 abandoned=()    #被Abandon的change
 row_count=0     #有效数据的个数(即json文件中最后一行中的rowCount)，用于最后校验和
+dates=""
 
 #发生异常，退出脚本
 error(){
@@ -13,9 +14,6 @@ error(){
 
 #脚本开始之前清理工作空间
 clean_space(){
-  if [ ! -d "input/" ];then
-    mkdir input
-  fi
   if [ ! -d "output/" ];then
     mkdir output
   fi
@@ -54,16 +52,23 @@ get_timestamp(){
   then
     timestamp=$(date -d "${1}" +%s)
     result=${?}
-    test ${result} -eq 1 && error   
+    test ${result} -eq 1 && error
   else
     timestamp=0
-    result=1
   fi
   echo ${timestamp}
 }
 
+#获取输入的日期
+get_date(){
+  timestamp=$(get_timestamp ${1})
+  data=$(date -d @${timestamp}  "+%Y-%m-%d") 
+  echo ${data}
+}
+
 #从info.json文件中读入数据
 read_file(){
+  date=$(get_date ${1})
   timestamp=$(get_timestamp ${1})
   while read line #从info.json逐行读入数据(每行都是一个project)
   do
@@ -109,7 +114,7 @@ read_file(){
 write_out(){
   if $(check_info)
   then
-    echo "以下是基于每个项目的change-----" >> output/based_on_project.txt
+    echo "以下是${date}之后基于每个项目的change-----" >> output/based_on_project.txt
     for ((i=0;i<${#project_list[@]};i++)) 
     do
         echo ${project_list[${i}]}"   Abandoned:${abandoned[${i}]}   Merged:${merged[${i}]}" >> output/based_on_project.txt
@@ -158,7 +163,6 @@ check_info(){
 
 main(){
   clean_space
-  get_data
   read_file ${1}
   write_out
 }
