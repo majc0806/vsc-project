@@ -12,7 +12,7 @@ error(){
 }
 
 get_data(){
-  ssh -p 29418 majc0806@192.168.67.126 gerrit query --format=JSON branch:benisont-y-2.2-sta1295-main  > input/data.json
+  ssh -p 29418 192.168.67.126 gerrit query --format=JSON branch:benisont-y-2.2-sta1295-main  > input/data.json
 }
 
 #脚本开始之前清理工作空间
