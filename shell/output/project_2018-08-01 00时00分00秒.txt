@@ -1,0 +1,30 @@
+以下是2018-08-01 00时00分00秒之后基于每个项目的change-----
+sphinx/mario/yocto/ConnectedHMI   Abandoned:36   Merged:95
+sphinx/a5/m3-loader   Abandoned:2   Merged:21
+sphinx/mario/yocto/build-tools   Abandoned:1   Merged:0
+sphinx/mario/yocto/meta-thundersoft   Abandoned:14   Merged:42
+sphinx/mario/yocto/BTService   Abandoned:4   Merged:15
+sphinx/mario/yocto/BspCommunicationService   Abandoned:8   Merged:12
+sphinx/mario/yocto/ConnectedHMI/HMIView   Abandoned:23   Merged:83
+sphinx/poky   Abandoned:3   Merged:6
+sphinx/a5/linux   Abandoned:4   Merged:9
+sphinx/mario/yocto/bdsound   Abandoned:1   Merged:0
+sphinx/a5/staudiolib   Abandoned:1   Merged:0
+sphinx/mario/yocto/lib_media   Abandoned:1   Merged:1
+sphinx/mario/yocto/AudioSourceManager   Abandoned:3   Merged:1
+sphinx/rcar/static_manifests_SY   Abandoned:0   Merged:14
+sphinx/a5/meta-st-carproc   Abandoned:0   Merged:2
+sphinx/mario/yocto/WindowManagerService   Abandoned:0   Merged:2
+sphinx/mario/yocto/WelinkService   Abandoned:0   Merged:3
+sphinx/mario/yocto/MediaScanService   Abandoned:1   Merged:4
+sphinx/mario/yocto/InfoReportService   Abandoned:0   Merged:6
+sphinx/mario/yocto/carplay-sdk   Abandoned:1   Merged:7
+sphinx/mario/yocto/CarlifeService   Abandoned:1   Merged:3
+sphinx/mario/yocto/SystemSettingService   Abandoned:1   Merged:2
+sphinx/mario/yocto/libbackup   Abandoned:0   Merged:4
+sphinx/mario/yocto/DiagService   Abandoned:0   Merged:1
+sphinx/mario/yocto/SystemLoggerService   Abandoned:0   Merged:2
+sphinx/mario/yocto/meta-cda-mw   Abandoned:0   Merged:1
+sphinx/mario/yocto/da-image   Abandoned:0   Merged:1
+sum change:442
+sum project:27

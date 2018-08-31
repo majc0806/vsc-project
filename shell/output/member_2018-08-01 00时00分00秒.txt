@@ -1,0 +1,37 @@
+以下是2018-08-01 00时00分00秒之后基于每个开发者的change-----
+hujj0411@thundersoft.com   Abandoned:1   Merged:8
+shaonan0714@thundersoft.com   Abandoned:3   Merged:0
+zhousb0115@thundersoft.com   Abandoned:14   Merged:11
+changmm0627@thundersoft.com   Abandoned:3   Merged:4
+fuhx0428@thundersoft.com   Abandoned:7   Merged:33
+zhangbo0718@thundersoft.com   Abandoned:6   Merged:1
+wangzg0808@thundersoft.com   Abandoned:8   Merged:10
+zhangjun0514@thundersoft.com   Abandoned:6   Merged:27
+xieguotian@fuerda-china.com   Abandoned:9   Merged:12
+geao0329@thundersoft.com   Abandoned:2   Merged:2
+nisj0516@thundersoft.com   Abandoned:3   Merged:12
+chenbing0419@thundersoft.com   Abandoned:5   Merged:7
+dubh0717@thundersoft.com   Abandoned:9   Merged:15
+jiangps1204@thundersoft.com   Abandoned:7   Merged:1
+zhaofs0921@thundersoft.com   Abandoned:1   Merged:16
+caiyc0619@thundersoft.com   Abandoned:3   Merged:11
+zhangjh0102@thundersoft.com   Abandoned:0   Merged:13
+chenhm0701@thundersoft.com   Abandoned:4   Merged:20
+kongkk1211@thundersoft.com   Abandoned:1   Merged:6
+zhangyf0409@thundersoft.com   Abandoned:0   Merged:1
+wangwp0409@thundersoft.com   Abandoned:0   Merged:12
+luzl1108@thundersoft.com   Abandoned:0   Merged:4
+tongyb0914@thundersoft.com   Abandoned:1   Merged:10
+zhangjy0801@thundersoft.com   Abandoned:1   Merged:22
+songcl0918@thundersoft.com   Abandoned:1   Merged:9
+zhangxia0731@thundersoft.com   Abandoned:1   Merged:24
+xujh1221@thundersoft.com   Abandoned:3   Merged:8
+chenlu0915@thundersoft.com   Abandoned:1   Merged:11
+lijq0702@thundersoft.com   Abandoned:3   Merged:5
+wanghb0313@thundersoft.com   Abandoned:0   Merged:17
+wangtq0608@thundersoft.com   Abandoned:1   Merged:1
+qinyh0226@thundersoft.com   Abandoned:0   Merged:3
+xuke0702@thundersoft.com   Abandoned:1   Merged:1
+sum change:442
+sum member:33
+
