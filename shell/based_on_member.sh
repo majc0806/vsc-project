@@ -28,14 +28,14 @@ get_timestamp(){
 
 #获取输入的日期
 get_date(){
-  timestamp=$(get_timestamp ${1})
-  data=$(date -d @${timestamp}  "+%Y-%m-%d") 
-  echo ${data}
+  timestamp=$(get_timestamp "${1}")
+  date=$(date -d @${timestamp}  "+%Y-%m-%d %X") 
+  echo ${date}
 }
 
 #脚本开始之前清理工作空间
 clean_space(){
-  date=$(get_date ${1})
+  date=$(get_date "${1}")
   if [ ! -d "output/" ];then
     mkdir output
   fi
@@ -45,8 +45,8 @@ clean_space(){
 #改变状态数组，参数1为status，参数2为成员数组当前索引
 #标识位为true时，表示Merged；false表示Abandoned
 change_status(){
-  echo "status改变索引的位置："${2}
-  if [ ${1} == "MERGED" ] #此时Merged+1
+  # echo "status改变索引的位置："${2}
+  if [ "${1}" == "MERGED" ] #此时Merged+1
   then
     let merged[${2}]++
     #如果此处的元素为空，置0
@@ -54,7 +54,7 @@ change_status(){
     then
     abandoned[${2}]=0
     fi
-  elif [ ${1} == "ABANDONED" ]    #此时ABANDONED+1
+  elif [ "${1}" == "ABANDONED" ]    #此时ABANDONED+1
   then
     let abandoned[${2}]++
     #如果此处的元素为空，置0
@@ -69,7 +69,7 @@ change_status(){
 
 #从info.json文件中读入数据
 read_file(){
-  timestamp=$(get_timestamp ${1})
+  timestamp=$(get_timestamp "${1}")
   while read line #从info.json逐行读入数据(每行都是一个project)
   do
     counter=0       #计数器
@@ -78,16 +78,17 @@ read_file(){
     #提取每行的状态(ABANDONED或是MERGED)
     status=$(echo ${line} | grep -Po '"status":"[A-Z]*"' | grep -Po '[A-Z]*')
     #提取当前change的提交时间
-    create_time=$(echo ${line} | grep -Po '"createdOn":[0-9]*' | grep -Po '[0-9]*')
-    
+    created_time_list=($(echo ${line} | grep -Po '"createdOn":[0-9]*' | grep -Po '[0-9]*'))
+    created_time=${created_time_list[0]}
+
     #如果时间不在2018-08-01之后，则跳过
-    if [[ -z ${create_time} || ${create_time} -lt ${timestamp} ]]
+    if [[ -z ${created_time} || ${created_time} -lt ${timestamp} ]]
     then
     continue
     fi
     let row_count++
 
-    echo ${email}" "${status}" "${row_count}
+    # echo ${email}" "${status}" "${row_count}
     
     flag=true  #设置一个标识位
     for member in ${member_list[@]}
@@ -162,9 +163,9 @@ check_info(){
 }
 
 main(){
-  clean_space ${1}
-  read_file ${1}
+  clean_space "${1}"
+  read_file "${1}"
   write_out
 }
 
-main ${1}
+main "${1}"

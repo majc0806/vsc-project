@@ -1,4 +1,4 @@
-以下是1970-01-01之后基于每个开发者的change-----
+以下是1970-01-01 08时00分00秒之后基于每个开发者的change-----
 hujj0411@thundersoft.com   Abandoned:1   Merged:8
 shaonan0714@thundersoft.com   Abandoned:3   Merged:0
 zhangjy0801@thundersoft.com   Abandoned:2   Merged:24
