@@ -2,7 +2,7 @@ project_list=() #项目列表
 merged=()       #被Merge的change
 abandoned=()    #被Abandon的change
 row_count=0     #有效数据的个数(即json文件中最后一行中的rowCount)，用于最后校验和
-dates=""
+date=""
 
 #发生异常，退出脚本
 error(){
@@ -12,12 +12,34 @@ error(){
 
 }
 
+#获取输入日期的时间戳，用于限定查询日期
+get_timestamp(){
+  timestamp=0
+  if [ -n "${1}" ]
+  then
+    timestamp=$(date -d "${1}" +%s)
+    result=${?}
+    test ${result} -eq 1 && error
+  else
+    timestamp=0
+  fi
+  echo ${timestamp}
+}
+
+#获取输入的日期
+get_date(){
+  timestamp=$(get_timestamp ${1})
+  data=$(date -d @${timestamp}  "+%Y-%m-%d") 
+  echo ${data}
+}
+
 #脚本开始之前清理工作空间
 clean_space(){
+  date=$(get_date ${1})
   if [ ! -d "output/" ];then
     mkdir output
   fi
-  rm -f output/based_on_project.txt
+  rm -f output/project_"${date}".txt
 }
 
 #改变状态数组，参数1为status，参数2为成员数组当前索引
@@ -45,30 +67,8 @@ change_status(){
   fi
 }
 
-#获取输入日期的时间戳，用于限定查询日期
-get_timestamp(){
-  timestamp=0
-  if [ -n "${1}" ]
-  then
-    timestamp=$(date -d "${1}" +%s)
-    result=${?}
-    test ${result} -eq 1 && error
-  else
-    timestamp=0
-  fi
-  echo ${timestamp}
-}
-
-#获取输入的日期
-get_date(){
-  timestamp=$(get_timestamp ${1})
-  data=$(date -d @${timestamp}  "+%Y-%m-%d") 
-  echo ${data}
-}
-
 #从info.json文件中读入数据
 read_file(){
-  date=$(get_date ${1})
   timestamp=$(get_timestamp ${1})
   while read line #从info.json逐行读入数据(每行都是一个project)
   do
@@ -114,14 +114,14 @@ read_file(){
 write_out(){
   if $(check_info)
   then
-    echo "以下是${date}之后基于每个项目的change-----" >> output/based_on_project.txt
+    echo "以下是${date}之后基于每个项目的change-----" >> output/project_"${date}".txt
     for ((i=0;i<${#project_list[@]};i++)) 
     do
-        echo ${project_list[${i}]}"   Abandoned:${abandoned[${i}]}   Merged:${merged[${i}]}" >> output/based_on_project.txt
+        echo ${project_list[${i}]}"   Abandoned:${abandoned[${i}]}   Merged:${merged[${i}]}" >> output/project_"${date}".txt
     done
 
-    echo "sum change:"${row_count} >> output/based_on_project.txt
-    echo "sum project:"${#project_list[@]} >> output/based_on_project.txt
+    echo "sum change:"${row_count} >> output/project_"${date}".txt
+    echo "sum project:"${#project_list[@]} >> output/project_"${date}".txt
   else
     error
   fi
@@ -162,7 +162,7 @@ check_info(){
 }
 
 main(){
-  clean_space
+  clean_space ${1}
   read_file ${1}
   write_out
 }

@@ -1,0 +1,39 @@
+以下是1970-01-01之后基于每个项目的change-----
+sphinx/mario/yocto/ConnectedHMI   Abandoned:40   Merged:101
+sphinx/a5/m3-loader   Abandoned:2   Merged:21
+sphinx/mario/yocto/build-tools   Abandoned:1   Merged:0
+sphinx/mario/yocto/meta-thundersoft   Abandoned:17   Merged:49
+sphinx/mario/yocto/BTService   Abandoned:5   Merged:17
+sphinx/mario/yocto/BspCommunicationService   Abandoned:9   Merged:12
+sphinx/mario/yocto/ConnectedHMI/HMIView   Abandoned:27   Merged:92
+sphinx/poky   Abandoned:3   Merged:7
+sphinx/a5/linux   Abandoned:4   Merged:10
+sphinx/mario/yocto/bdsound   Abandoned:1   Merged:0
+sphinx/a5/staudiolib   Abandoned:1   Merged:0
+sphinx/mario/yocto/lib_media   Abandoned:1   Merged:2
+sphinx/mario/yocto/AudioSourceManager   Abandoned:3   Merged:2
+sphinx/rcar/static_manifests_SY   Abandoned:0   Merged:14
+sphinx/a5/meta-st-carproc   Abandoned:0   Merged:2
+sphinx/mario/yocto/WindowManagerService   Abandoned:0   Merged:2
+sphinx/mario/yocto/WelinkService   Abandoned:1   Merged:3
+sphinx/mario/yocto/MediaScanService   Abandoned:1   Merged:4
+sphinx/mario/yocto/InfoReportService   Abandoned:0   Merged:7
+sphinx/mario/yocto/Chinese2Phonetic   Abandoned:0   Merged:1
+sphinx/mario/yocto/carplay-sdk   Abandoned:2   Merged:8
+sphinx/mario/yocto/CarlifeService   Abandoned:2   Merged:5
+sphinx/mario/yocto/SystemSettingService   Abandoned:1   Merged:2
+sphinx/mario/yocto/libbackup   Abandoned:0   Merged:5
+sphinx/mario/yocto/DiagService   Abandoned:0   Merged:1
+sphinx/a5/manifest   Abandoned:0   Merged:1
+sphinx/mario/yocto/SystemLoggerService   Abandoned:0   Merged:2
+sphinx/mario/yocto/meta-cda-mw   Abandoned:0   Merged:1
+sphinx/mario/yocto/da-image   Abandoned:0   Merged:1
+sphinx/mario/yocto/cypress-tp-fw   Abandoned:1   Merged:0
+sphinx/mario/yocto/jemalloc   Abandoned:1   Merged:0
+sphinx/mario/yocto/wmctrl   Abandoned:1   Merged:0
+sphinx/mario/yocto/poco   Abandoned:1   Merged:0
+sphinx/mario/yocto/jsoncpp   Abandoned:1   Merged:0
+sphinx/mario/yocto/system-upgrade   Abandoned:0   Merged:1
+sphinx/mario/yocto/recovery-ui   Abandoned:0   Merged:1
+sum change:500
+sum project:36

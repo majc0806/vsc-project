@@ -1,0 +1,24 @@
+以下是2018-08-13之后基于每个开发者的change-----
+chenbing0419@thundersoft.com   Abandoned:1   Merged:0
+dubh0717@thundersoft.com   Abandoned:2   Merged:2
+jiangps1204@thundersoft.com   Abandoned:3   Merged:0
+changmm0627@thundersoft.com   Abandoned:1   Merged:0
+zhaofs0921@thundersoft.com   Abandoned:0   Merged:2
+caiyc0619@thundersoft.com   Abandoned:0   Merged:1
+zhangjh0102@thundersoft.com   Abandoned:0   Merged:5
+chenhm0701@thundersoft.com   Abandoned:0   Merged:2
+wangzg0808@thundersoft.com   Abandoned:0   Merged:3
+kongkk1211@thundersoft.com   Abandoned:0   Merged:1
+zhangjun0514@thundersoft.com   Abandoned:0   Merged:4
+geao0329@thundersoft.com   Abandoned:0   Merged:2
+zhangyf0409@thundersoft.com   Abandoned:0   Merged:1
+zhousb0115@thundersoft.com   Abandoned:1   Merged:2
+wangwp0409@thundersoft.com   Abandoned:0   Merged:1
+nisj0516@thundersoft.com   Abandoned:0   Merged:1
+luzl1108@thundersoft.com   Abandoned:0   Merged:1
+tongyb0914@thundersoft.com   Abandoned:0   Merged:1
+zhangjy0801@thundersoft.com   Abandoned:1   Merged:0
+songcl0918@thundersoft.com   Abandoned:0   Merged:1
+sum change:39
+sum member:20
+
