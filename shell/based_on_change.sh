@@ -40,7 +40,7 @@ clean_space(){
 
 #从info.json文件中读入数据
 read_file(){
-  echo "以下是${date}之后每个change的活动时间和包含的patch set的数量-----" >> output/changeid_"${date}".txt
+  echo "以下是${date}之后每个change的活动时间和包含的patch set的数量------" >> output/changeid_"${date}".txt
   timestamp=$(get_timestamp "${1}")
   #设置一个计数器
   counter=0
@@ -70,7 +70,7 @@ read_file(){
     alive_time=""
     fi
 
-    #如果时间不在2018-08-01之后，则跳过
+    #如果时间不在给定时间之后，则跳过
     if [[ -z ${change_id} || -z ${patch_set_number} || -z ${alive_time} || ${created_time} -lt ${timestamp} ]]
     then
     continue

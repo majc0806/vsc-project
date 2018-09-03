@@ -81,10 +81,10 @@ read_file(){
     created_time_list=($(echo ${line} | grep -Po '"createdOn":[0-9]*' | grep -Po '[0-9]*'))
     created_time=${created_time_list[0]}
 
-    #如果时间不在2018-08-01之后，则跳过
+    #如果时间不在给定时间之后，则跳过
     if [[ -z ${created_time} || ${created_time} -lt ${timestamp} ]]
     then
-    continue
+      continue
     fi
     let row_count++
 

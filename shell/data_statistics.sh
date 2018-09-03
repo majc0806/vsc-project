@@ -13,6 +13,7 @@ start(){
   bash based_on_member.sh "${1}"
   bash based_on_project.sh "${1}"
   bash based_on_change.sh "${1}"
+  bash get_invalid_changes.sh "${1}"
 }
 
 get_data(){

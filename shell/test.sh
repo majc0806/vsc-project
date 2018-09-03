@@ -1,4 +1,4 @@
-a="2018-08-01 11:11:22"
-date=$(echo ${a} | grep -Po '^[0-9]{4}-[0-9]{2}-[0-9]{2}|[0-9]{2}:[0-9]{2}:[0-9]{2}')
+line='{"project":"sphinx/mario/yocto/meta-thundersoft","branch":"benisont-y-2.2-sta1295-main","id":"Ia16b571a6bc734a0053d395e1e2cf7bb1bc3c1ab","number":22972,"subject":   "revert \"Change SystemD to SystemdV\"","owner":{"email":"caiyc0619@thundersoft.com","username":"caiyc0619"},"url":"http://192.168.67.126:8080/22972","commitMessage":"Revert \"Change SystemD to SystemdV\"\n\nThis reverts commit 0419c5a5c23cbcdf21ea5540f5e136081389fb2c.\n\nChange-Id: Ia16b571a6bc734a0053d395e1e2cf7bb1bc3c1ab\n","createdOn":1533897204,"lastUpdated":1533905687,"open":false,"status":"MERGED","patchSets":[{"number":1,"revision":"022016f4981d582de00d6c404700b8be60f4f4ce","parents":["0419c5a5c23cbcdf21ea5540f5e136081389fb2c"],"ref":"refs/changes/72/22972/1","uploader":{"email":"caiyc0619@thundersoft.com","username":"caiyc0619"},"createdOn":1533897204,"author":{"email":"caiyc0619@thundersoft.com","username":"caiyc0619"},"isDraft":false,"kind":"REWORK","sizeInsertions":127,"sizeDeletions":-56}]}'
+subject=$(echo ${line} | grep -Po '"subject":[ ]*"[Rr]evert')
 result=${?}
-echo ${date}" "${result}
+echo ${subject}" "${result}
